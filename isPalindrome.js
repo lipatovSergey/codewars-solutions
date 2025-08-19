@@ -1,5 +1,6 @@
 // Check polindrome ignoring case and spaces
 function isPolindrome(s) {
+	// regex for all lower case letters in unicode
 	const regex = /^[\p{L}]+$/u;
 	let arr = [];
 	let polindrome = true;

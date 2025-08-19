@@ -2,7 +2,7 @@
 //Как впринципе работает переворачмвание строки? Если разделить строку условно пополам. То символы должны занять места соответстующие их месту в противоположной половине. 1 2 3  | 3. 2. 1.  ==> 1. 2. 3. | 3 2 1
 function reverseString(s) {
 	const arr = [];
-	for (symbol of s) {
+	for (let symbol of s) {
 		arr.push(symbol);
 	}
 
@@ -21,4 +21,12 @@ function reverseString(s) {
 	return answer;
 }
 
-console.log(reverseString("hello"));
+function reverseString_1(s) {
+	let answer = "";
+	for (let i = s.length - 1; i >= 0; i--) {
+		answer += s[i];
+	}
+	return answer;
+}
+
+console.log(reverseString_1("hello"));
